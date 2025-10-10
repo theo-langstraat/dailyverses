@@ -54,16 +54,17 @@ Bible Translations per Language
 -------------------------------
 
 <img src="Documentation/Screenshots/CreateNewContentLanguage.png" alt="CreateNewContentLanguage" width="600"/>
-   *Create New Content – Configuration → Languages*
+
+*Create New Content – Configuration → Languages*
 
 Options
 -------
 <img src="Documentation/Screenshots/EditPageContentOptions.png" alt="EditPageContentOptions" width="600"/>
 
-   *Create New Content – Configuration → Options*
+*Create New Content - Configuration → Options*
 
 * **Show Dailyverse link:**  
-  Displays a link in the frontend to `dailyverses.net <https://dailyverses.net>`_
+  Displays a link in the frontend to [dailyverses.net](https://dailyverses.net)
 
 * **Minimal height:**  
   You can optionally add a background image. To create more space for the image, define a minimum height in `em` below the text.
@@ -78,9 +79,8 @@ Options
   If the `bootstrap_package` extension is installed, Bootstrap theme variables from bootstrap.css will be applied.
   Otherwise, the default styling from dailyverses.css will be used.
 
-> ⚠️ **Let op**  
-> Als het `bootstrap_package` wordt verwijderd, geïnstalleerd of geactiveerd, is het belangrijk om de siteconfiguratie opnieuw op te slaan.  
-> Dit zorgt ervoor dat de FlexForms worden bijgewerkt en de nieuwe situatie correct wordt weergegeven.
+> ⚠️ **Warning**  
+> If the `bootstrap_package` is removed, installed, or activated, it is important to save the site configuration again. This ensures that the FlexForms are updated to reflect the new situation.
 
 ### Voorbeeld `custom.css`
 ```css
