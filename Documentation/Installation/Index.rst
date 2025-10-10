@@ -13,6 +13,9 @@ Requirements
 
 - TYPO3 v13 or higher  
 - PHP 8.3 or higher  
+
+Optional
+--------
 - Bootstrap Package 15.0 or higher
 
 ----
@@ -20,3 +23,4 @@ Requirements
 .. raw:: html
 
    <div style="height: 1em;"></div>
+
