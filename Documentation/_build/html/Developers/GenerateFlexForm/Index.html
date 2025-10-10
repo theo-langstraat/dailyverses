@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="dailyverses" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="13.4.3" />
+    <meta name="docsearch:version" content="" />
+    
+    <title>GenerateFlexForm &mdash; dailyverses 13.4.3 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9e84d21d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=dece2863" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
+    <!-- linktags -->
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="dailyverses 13.4.3 documentation" href="#" />
+    <link rel="up" title="Developers" href="../Index.html" />
+    <link rel="next" title="Change log" href="../../ChangeLog/Index.html" />
+    <link rel="prev" title="FlexFormParsingModifyEventListener" href="../EventListeners/Index.html" />
+    <!-- /linktags -->
+    <!-- extrahead --><!-- /extrahead -->
+    <script src="../../_static/js/modernizr.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <!--block pageheader-->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-7">
+
+                        <div class="logo">
+                            <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
+
+                                <img src="../../_static/img/typo3-logo.svg"
+                                    width="484" 
+                                    height="130"  alt="Logo of dailyverses"
+                                     class="logo-image" />
+                            </a>
+                        </div>
+                    </div><!--/.col-x-->
+                    <div class="col-sm-6 col-lg-5">
+                        <div role="search">
+                            
+                            <!--form global search-->
+                        </div>
+                    </div><!--/.col-x-->
+                </div><!--/.row-->
+                <!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                <a class="toc-title-project" href="../../index.html">dailyverses</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+                            <!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                            <!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+                                <!-- menu -->
+                                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Configuration/Index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BibleTranslations/Index.html">Available Bible translations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Usage/Index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">Developers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Overview/Index.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Controller/Index.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EventListeners/Index.html">FlexFormParsingModifyEventListener</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GenerateFlexForm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ChangeLog/Index.html">Change log</a></li>
+</ul>
+
+                                <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                <ul>
+<li><a class="reference internal" href="#">GenerateFlexForm</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#location">Location</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#method-signature">Method Signature</a><ul>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#workflow">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+                        <!-- pager-hidden.html -->
+                        
+        <a class="no-focus" accesskey="p" href="../EventListeners/Index.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../../ChangeLog/Index.html" tabindex="-1"></a>
+                        <!-- /pager-hidden.html -->
+                        <!-- breadcrumbs.html -->
+                        <div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="../Index.html">Developers</a></li>
+        <li class="breadcrumb-item active" aria-current="page">GenerateFlexForm</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../../_sources/Developers/GenerateFlexForm/Index.rst.txt" rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+    </div>
+</div>
+                        <!-- /breadcrumbs.html -->
+                        <!-- displaysettingsui.html -->
+                        <div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+                        <!-- /displaysettingsui.html -->
+                        <!-- versionhints.html -->
+                        <div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+                        <!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+                                <!-- body -->
+    <section id="generateflexform">
+<h1>GenerateFlexForm<a class="headerlink" href="#generateflexform" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>The <cite>GenerateFlexForm</cite> class is part of the <code class="docutils literal notranslate"><span class="pre">Theolangstraat\Dailyverses\Configuration\EventListener</span></code> namespace. It dynamically generates a FlexForm XML configuration file for a TYPO3 site based on available languages and Bible translation options.</p>
+<p>This guide explains the structure, purpose, and usage of the class and its <cite>generate()</cite> method.</p>
+</section>
+<section id="location">
+<h2>Location<a class="headerlink" href="#location" title="Link to this heading">¶</a></h2>
+<p>The class is located at:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">typo3conf/ext/dailyverses/Configuration/EventListener/GenerateFlexForm.php</span>
+</pre></div>
+</div>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>TYPO3 CMS Core Utility (<cite>GeneralUtility</cite>)</p></li>
+<li><p>Language options file: <cite>Configuration/LanguageOptions.php</cite></p></li>
+</ul>
+</section>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">¶</a></h2>
+<p>The <cite>generate()</cite> method creates a FlexForm XML file containing:</p>
+<ul class="simple">
+<li><p>A tab for each language with a dropdown of Bible translations</p></li>
+<li><p>A default options tab with additional configuration settings</p></li>
+</ul>
+</section>
+<section id="method-signature">
+<h2>Method Signature<a class="headerlink" href="#method-signature" title="Link to this heading">¶</a></h2>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">generate</span><span class="p">(</span><span class="nv">$siteIdentifier</span><span class="p">,</span> <span class="nv">$languages</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><cite>siteIdentifier</cite> (string): Unique identifier for the site, used to name the output XML file.</p></li>
+<li><p><cite>languages</cite> (array): List of language configurations, each containing:</p>
+<ul>
+<li><p><cite>locale</cite>: Locale string (e.g., <cite>en_US</cite>)</p></li>
+<li><p><cite>title</cite>: Human-readable language name</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Load Bible Translation Options</strong></p></li>
+</ol>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="c1">// This file returns an array of available Bible translations per language code.</span>
+<span class="nv">$languageOptions</span> <span class="o">=</span> <span class="k">require</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/../../../Configuration/LanguageOptions.php&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic" start="2">
+<li><p><strong>Create Language-Specific Sheets</strong></p>
+<p>For each language in <cite>$languages</cite>, a sheet is created with:</p>
+<ul class="simple">
+<li><p>Sheet title set to the language name</p></li>
+<li><p>A dropdown (<cite>selectSingle</cite>) listing Bible translations for that language</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<div style="height: 1em;"></div></section>
+</section>
+
+<!-- /body -->
+                            </div>
+                        </div>
+                        <!-- pager.html -->
+                        <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="../EventListeners/Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../../ChangeLog/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+                        <!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+            <!-- footer.html -->
+            <footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://www.langstraatonline.nl" title="Home"><span>Home</span></a></li><li><a href="mailto:theo.langstraat@delta.nl" title="Contact"><span>Contact</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.9.0</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright 2025–2025, Theo Langstraat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            <!-- /footer.html -->
+        </div>
+    </div>
+
+    <div id="documentation_options" data-url_root="../../"></div>
+
+    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '13.4.3',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/autocomplete.min.js"></script>
+    <script src="../../_static/documentation_options.js?v=c7007fe3"></script>
+    <script src="../../_static/sphinx_highlight.js?v=1e77cb73"></script>
+    <script type="text/javascript">
+        jQuery(function () { Search.loadIndex("../../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+    <!-- scripts2 --><!-- /scripts2 -->
+    <!-- footer2 --><!-- /footer2 -->
+
+</body>
+
+</html>

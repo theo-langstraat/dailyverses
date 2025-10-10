@@ -1,0 +1,6 @@
+/* Verwijder extra dubbele punt na veldnamen */
+
+.rst-content dl.field-list>dt:after {
+    content: "" !important;
+}
+

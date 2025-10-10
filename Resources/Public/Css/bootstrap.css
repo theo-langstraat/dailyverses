@@ -1,0 +1,25 @@
+.bibletext-outerFrame {
+    min-height: 0rem;
+}
+
+.bibletext-frame {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: var(--frame-color) !important;
+    background-color: var(--frame-background);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.bibletext {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 120%;
+    font-style: italic;
+}
+
+.bibleverse {
+    text-align: center;
+    font-size: 80%;
+    opacity: 40%;
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="docsearch:name" content="dailyverses" />
+    <meta name="docsearch:package_type" content="" />
+    <meta name="docsearch:release" content="13.4.3" />
+    <meta name="docsearch:version" content="" />
+    
+    <title>Overview &mdash; dailyverses 13.4.3 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8e8a900e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9e84d21d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=dece2863" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/webfonts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/codeblock.css" />
+    <!-- linktags -->
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="dailyverses 13.4.3 documentation" href="#" />
+    <link rel="up" title="Developers" href="../Index.html" />
+    <link rel="next" title="Controller" href="../Controller/Index.html" />
+    <link rel="prev" title="Developers" href="../Index.html" />
+    <!-- /linktags -->
+    <!-- extrahead --><!-- /extrahead -->
+    <script src="../../_static/js/modernizr.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-header">
+            <div class="page-header-inner">
+                <!--block pageheader-->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-7">
+
+                        <div class="logo">
+                            <a href="https://docs.typo3.org/" title="TYPO3 Documentation" >
+
+                                <img src="../../_static/img/typo3-logo.svg"
+                                    width="484" 
+                                    height="130"  alt="Logo of dailyverses"
+                                     class="logo-image" />
+                            </a>
+                        </div>
+                    </div><!--/.col-x-->
+                    <div class="col-sm-6 col-lg-5">
+                        <div role="search">
+                            
+                            <!--form global search-->
+                        </div>
+                    </div><!--/.col-x-->
+                </div><!--/.row-->
+                <!--/block pageheader-->
+            </div><!--/.page-header-inner-->
+        </div><!--/.page-header-->
+
+        
+
+        <div class="page-main">
+            <div class="page-main-inner">
+                <div class="page-main-navigation">
+                    <nav>
+                        <input type="checkbox" id="toggleToc" class="toc-checkbox">
+                        <div class="toc-header"><div class="toc-title">
+                                <a class="toc-title-project" href="../../index.html">dailyverses</a></div><div class="toc-actions">
+                                <label for="toggleToc" class="toc-toggle">
+                                    Menu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toc-collapse">
+                            <!-- searchbox.html -->
+<div id="searchbox" class="toc-search" role="search">
+    <form id="search-form" action="../../search.html" autocomplete="off" method="get">
+        <input class="form-control" type="text" name="q" placeholder="Search this project" aria-label="Search this project" id="searchinput" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+                            <!-- /searchbox.html -->
+                            <div class="toc" role="navigation" aria-label="main navigation">
+                                <!-- menu -->
+                                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/Index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Installation/Index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Configuration/Index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../BibleTranslations/Index.html">Available Bible translations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Usage/Index.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Index.html">Developers</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Controller/Index.html">Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EventListeners/Index.html">FlexFormParsingModifyEventListener</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GenerateFlexForm/Index.html">GenerateFlexForm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ChangeLog/Index.html">Change log</a></li>
+</ul>
+
+                                <p class="caption"><span class="caption-text">PAGE CONTENTS</span></p>
+                                <ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#file-overview">File Overview</a></li>
+<li><a class="reference internal" href="#caching-strategy">Caching Strategy</a></li>
+<li><a class="reference internal" href="#controller-logic">Controller Logic</a></li>
+<li><a class="reference internal" href="#external-dependencies">External Dependencies</a></li>
+</ul>
+</li>
+</ul>
+<!-- /menu -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-main-content">
+                    <div class="rst-content">
+                        <!-- pager-hidden.html -->
+                        
+        <a class="no-focus" accesskey="p" href="../Index.html" tabindex="-1"></a>
+        <a class="no-focus" accesskey="n" href="../Controller/Index.html" tabindex="-1"></a>
+                        <!-- /pager-hidden.html -->
+                        <!-- breadcrumbs.html -->
+                        <div class="breadcrumb-bar" role="navigation" aria-label="breadcrumbs navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Start</a></li>
+            <li class="breadcrumb-item"><a href="../Index.html">Developers</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Overview</li>
+    </ol>
+    <div class="breadcrumb-additions">
+        <a class="btn btn-sm btn-light" href="../../_sources/Developers/Overview/Index.rst.txt" rel="nofollow noopener" target="_blank">
+            <span class="btn-icon"><span class="fas fa-code"></span></span>
+            <span class="btn-text">View source</span>
+        </a>
+    </div>
+</div>
+                        <!-- /breadcrumbs.html -->
+                        <!-- displaysettingsui.html -->
+                        <div id="displaysettingsui" class="displaysettingsui">
+<div class="dsDivCogwheel"><i id="dsCogwheel" class="fas fa-cog" title="Display settings"></i></div>
+<div id="dsPanel" class="dsPanel" ><p><b>Display settings</b></p>
+<input type="checkbox" id="cbFullWidth"><label for="cbFullWidth">Use full width</label><br>
+Color scheme of code blocks:<br>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeDark" checked="checked" value="dark"/>
+<label for="rbCbsThemeDark">dark</label>
+<input type="radio" name="rbCbsTheme" id="rbCbsThemeLight" value="light"/>
+<label for="rbCbsThemeLight">light</label><br>
+<input type="checkbox" id="cbPermanent"><label for="cbPermanent">Make settings permanent</label><br>
+</div><!--/.dsPanel-->
+</div><!--/.displaysettingsui-->
+                        <!-- /displaysettingsui.html -->
+                        <!-- versionhints.html -->
+                        <div class="version-hints">
+
+    <div class="version-hints-inner" data-run-ajax="no">
+<!--filled from _static/ajax-version-hints.html-->
+</div><!--/.version-hints-inner-->
+</div><!--/.version-hints-->
+                        <!-- /versionhints.html -->
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+                                <!-- body -->
+    <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
+<p>DailyVerses Extension – Documentation</p>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Link to this heading">¶</a></h2>
+<p>This extension retrieves either a daily or random Bible verse from <a class="reference external" href="https://dailyverses.net">dailyverses.net</a> and displays it in the TYPO3 frontend. When using the daily mode, caching is applied per language and per date.</p>
+</section>
+<section id="file-overview">
+<h2>File Overview<a class="headerlink" href="#file-overview" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">ext_localconf.php</span></code>: Defines the cache configuration <code class="code docutils literal notranslate"><span class="pre">daily_verse_cache</span></code>.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">DailyVersesController.php</span></code>: Contains the logic for retrieving, processing, and caching the Bible verse.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">LanguageOptions.php</span></code>: Maps language codes to Bible versions and URLs.</p></li>
+</ul>
+</section>
+<section id="caching-strategy">
+<h2>Caching Strategy<a class="headerlink" href="#caching-strategy" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Cache is stored under the key <code class="code docutils literal notranslate"><span class="pre">daily_verse_&lt;languageUid&gt;</span></code>.</p></li>
+<li><p>Each cache entry contains:</p></li>
+</ul>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="p">[</span>
+  <span class="s1">&#39;date&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;YYYY-MM-DD&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;verse&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s1">&#39;text&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span><span class="p">,</span> <span class="s1">&#39;verse&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span><span class="p">,</span> <span class="s1">&#39;link&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span><span class="p">,</span> <span class="s1">&#39;linkText&#39;</span> <span class="o">=&gt;</span> <span class="o">...</span> <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Upon retrieval, the date is checked against today’s date. If it does not match, a new verse is fetched and stored.</p></li>
+</ul>
+</section>
+<section id="controller-logic">
+<h2>Controller Logic<a class="headerlink" href="#controller-logic" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">Generate()</span></code>: Fetches HTML from dailyverses.net, decodes it, and filters relevant elements.</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">showverseAction()</span></code>:
+- In <code class="code docutils literal notranslate"><span class="pre">daily</span></code> mode: uses cache per language and date.
+- In <code class="code docutils literal notranslate"><span class="pre">random</span></code> mode: fetches a random verse directly without caching.</p></li>
+</ul>
+</section>
+<section id="external-dependencies">
+<h2>External Dependencies<a class="headerlink" href="#external-dependencies" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Daily verse: <code class="code docutils literal notranslate"><span class="pre">https://dailyverses.net/get/verse.js?language=&lt;code&gt;</span></code></p></li>
+<li><p>Random verse: <code class="code docutils literal notranslate"><span class="pre">https://dailyverses.net/get/random.js?language=&lt;code&gt;</span></code></p></li>
+</ul>
+<hr class="docutils" />
+<div style="height: 1em;"></div></section>
+</section>
+
+<!-- /body -->
+                            </div>
+                        </div>
+                        <!-- pager.html -->
+                        <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="../Index.html" title="Accesskey Alt(+Shift)+p">
+                Previous
+            </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="../Controller/Index.html" title="Accesskey Alt(+Shift)+n">
+                Next
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+                        <!-- /pager.html -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="page-footer">
+            <!-- footer.html -->
+            <footer>
+    <div class="frame frame-ruler-before frame-background-dark">
+        <div class="frame-container">
+            <div class="frame-inner">
+                <ul class="footer-simplemenu">
+                    <li><a href="https://www.langstraatonline.nl" title="Home"><span>Home</span></a></li><li><a href="mailto:theo.langstraat@delta.nl" title="Contact"><span>Contact</span></a></li>
+                </ul>
+                <div class="footer-additional">
+                    <ul class="footer-simplemenu">
+                        <li><a href="https://github.com/TYPO3-Documentation/sphinx_typo3_theme" title="sphinx_typo3_theme" target="_blank">
+                        <span>TYPO3 Theme 4.9.0</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-meta">
+                    <div class="footer-meta-copyright">
+                        &copy; Copyright 2025–2025, Theo Langstraat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+            <!-- /footer.html -->
+        </div>
+    </div>
+
+    <div id="documentation_options" data-url_root="../../"></div>
+
+    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT: '../../',
+            VERSION: '13.4.3',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE: true
+        };
+    </script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/underscore.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/doctools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/theme.min.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/js/searchtools.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/autocomplete.min.js"></script>
+    <script src="../../_static/documentation_options.js?v=c7007fe3"></script>
+    <script src="../../_static/sphinx_highlight.js?v=1e77cb73"></script>
+    <script type="text/javascript">
+        jQuery(function () { Search.loadIndex("../../searchindex.js"); });
+    </script>
+    <script type="text/javascript" id="searchindexloader"></script>
+    <!-- scripts2 --><!-- /scripts2 -->
+    <!-- footer2 --><!-- /footer2 -->
+
+</body>
+
+</html>
