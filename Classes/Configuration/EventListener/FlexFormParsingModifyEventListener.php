@@ -131,24 +131,26 @@ public function setDataStructureIdentifier(BeforeFlexFormDataStructureIdentifier
 
     public function setFlexForms(PackageInitializationEvent $event): void
     {
-        if ($event->getExtensionKey() === 'dailyverses') {
+        if ($event->getExtensionKey() !== 'dailyverses') {
+            return;
+        }
 
-            $container = $event->getContainer();
-            if (!$container->has(SiteFinder::class)) {
-                return;
-            }
+        $container = $event->getContainer();
 
-            $generateFlexForm = GeneralUtility::makeInstance(GenerateFlexForm::class);
+        // Bescherm tegen null container
+        if ($container === null || !$container->has(SiteFinder::class)) {
+            return;
+        }
 
-            $siteFinder = $container->get(SiteFinder::class);
-            foreach ($siteFinder->getAllSites() as $site) {
+        $generateFlexForm = GeneralUtility::makeInstance(GenerateFlexForm::class);
+        $siteFinder = $container->get(SiteFinder::class);
 
-                $configuration = $site->getConfiguration();
-                $siteIdentifier = $site->getIdentifier();
-
-                $generateFlexForm->generate($siteIdentifier, $configuration['languages']);
-            }
+        foreach ($siteFinder->getAllSites() as $site) {
+            $configuration = $site->getConfiguration();
+            $siteIdentifier = $site->getIdentifier();
+            $generateFlexForm->generate($siteIdentifier, $configuration['languages']);
         }
     }
 
 }
+
