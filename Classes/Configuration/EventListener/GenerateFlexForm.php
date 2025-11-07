@@ -107,9 +107,10 @@ class GenerateFlexForm
         // This dot is needed for <settings.xxxx> to make the variable available in the frontend controller
         $flexXml = str_replace('_dot_', '.', $flexXmlRaw);
 
-        $path = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . '/typo3conf/ext/dailyverses/Configuration/FlexForms/' . $siteIdentifier . '.xml';
+        $path = ExtensionManagementUtility::extPath('dailyverses') . 'Configuration/FlexForms/' . $siteIdentifier . '.xml';
         GeneralUtility::writeFile($path, $flexXml);
 
         return true;
     }
 }
+
