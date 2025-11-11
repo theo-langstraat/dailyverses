@@ -1,0 +1,6 @@
+services:
+  Theolangstraat\Dailyverses\Configuration\EventListener\SiteFlexFormListener:
+    tags:
+      - name: event.listener
+        identifier: 'dailyverses-flexform'
+        event: TYPO3\CMS\Core\Configuration\Event\AfterTcaCompilationEvent
