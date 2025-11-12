@@ -6,6 +6,7 @@ namespace Theolangstraat\Dailyverses\Configuration\EventListener;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Core\Environment;
 
 class GenerateFlexForm
 {
@@ -100,17 +101,28 @@ class GenerateFlexForm
                 ],
             ];
 
-        // 4. Convert array to XML
+        // Convert array to XML
         $flexXmlRaw = GeneralUtility::array2xml($flexFormArray, '', 0, 'T3DataStructure');
 
         // array2xml removes the dot during conversion. 
         // This dot is needed for <settings.xxxx> to make the variable available in the frontend controller
         $flexXml = str_replace('_dot_', '.', $flexXmlRaw);
 
-        $path = ExtensionManagementUtility::extPath('dailyverses') . 'Configuration/FlexForms/' . $siteIdentifier . '.xml';
-        GeneralUtility::writeFile($path, $flexXml);
+        $defaultFile = ExtensionManagementUtility::extPath('dailyverses')
+            . 'Configuration/FlexForms/FlexForm.xml';
+
+        $targetDir = Environment::getVarPath() . '/dailyverses/flexforms';
+        GeneralUtility::mkdir_deep($targetDir);
+
+        $targetFile = $targetDir . '/FlexForm.xml';
+
+        if (!file_exists($targetFile)) {
+            copy($defaultFile, $targetFile);
+        }
+
+        $targetFile = $targetDir . '/' . $siteIdentifier . '.xml';
+        GeneralUtility::writeFile($targetFile, $flexXml);
 
         return true;
     }
 }
-

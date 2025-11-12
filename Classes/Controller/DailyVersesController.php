@@ -54,7 +54,7 @@ class DailyVersesController extends ActionController
         $url = $basesUrl . $version;
         $bibleVersion = $foundVersion;
 
-        // Step 1: Retrieve the content from the URL
+        // Retrieve the content from the URL
         $html = @file_get_contents($url);
         if ($html === false) {
             echo 'Could not retrieve the Bible verse.';
@@ -70,7 +70,7 @@ class DailyVersesController extends ActionController
         $pos = strpos($html, "'"); // start of content
         $html = substr($html, $pos, null); // length: null = to the end of the line in php8.0
 
-        // Step 2: Decode Unicode-escaped HTML to readable HTML
+        // Decode Unicode-escaped HTML to readable HTML
         $html = '"' . $html . '"'; // create json string
         $html = json_decode($html);
         $html = substr($html, 1, strlen($html)-3); // remove first "'" and last "';"
@@ -79,13 +79,13 @@ class DailyVersesController extends ActionController
         $html = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">' . $html;
         $html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
 
-        // Step 3: Load the HTML into a DOMDocument
+        // Load the HTML into a DOMDocument
         $dom = new \DOMDocument('1.0', 'UTF-8');
         libxml_use_internal_errors(true); // suppress warnings
         $dom->loadHTML($html);
         libxml_clear_errors();
 
-        // Step 4: Find the elements
+        // Find the elements
         $bibleTextElement = '';
         $bibleVerseElement = '';
 

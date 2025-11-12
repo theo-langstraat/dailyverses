@@ -17,7 +17,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 final class SiteConfigurationBeforeWrite
 {
     public function SiteConfigurationBeforeWrite(SiteConfigurationBeforeWriteEvent $event): void
-    //public function __invoke(SiteConfigurationBeforeWriteEvent $event): void
     {
         $siteIdentifier = $event->getSiteIdentifier();
         $configuration = $event->getConfiguration();

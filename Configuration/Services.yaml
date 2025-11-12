@@ -1,9 +1,0 @@
-services:
-  Theolangstraat\Dailyverses\Configuration\EventListener\SiteFlexFormListener:
-    arguments:
-      $siteFinder: '@TYPO3\CMS\Core\Site\SiteFinder'
-      $generateFlexForm: '@Theolangstraat\Dailyverses\Configuration\EventListener\GenerateFlexForm'
-    tags:
-      - name: event.listener
-        identifier: 'dailyverses-flexform'
-        event: TYPO3\CMS\Core\Configuration\Event\AfterTcaCompilationEvent

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 // Mapping of language ID to bible version and URL
 
 return [

@@ -5,35 +5,25 @@ declare(strict_types=1);
 namespace Theolangstraat\Dailyverses\Configuration\EventListener;
 
 use TYPO3\CMS\Core\Attribute\AsEventListener;
-use TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureIdentifierInitializedEvent;
-use TYPO3\CMS\Core\Configuration\Event\AfterFlexFormDataStructureParsedEvent;
 use TYPO3\CMS\Core\Configuration\Event\BeforeFlexFormDataStructureIdentifierInitializedEvent;
 use TYPO3\CMS\Core\Configuration\Event\BeforeFlexFormDataStructureParsedEvent;
 use TYPO3\CMS\Core\Package\Event\PackageInitializationEvent;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Site\SiteFinder;
+use TYPO3\CMS\Core\Database\ConnectionPool;
+use TYPO3\CMS\Core\Core\Environment;
+use Doctrine\DBAL\ParameterType;
 use Theolangstraat\Dailyverses\Configuration\EventListener\FlexFormContextStorage;
 use Theolangstraat\Dailyverses\Configuration\EventListener\GenerateFlexForm;
-use TYPO3\CMS\Core\Database\ConnectionPool;
-use Doctrine\DBAL\ParameterType;
 
 #[AsEventListener(
     identifier: 'dailyverses/set-data-structure',
     method: 'setDataStructure',
 )]
 #[AsEventListener(
-    identifier: 'dailyverses/modify-data-structure',
-    method: 'modifyDataStructure',
-)]
-#[AsEventListener(
     identifier: 'dailyverses/set-data-structure-identifier',
     method: 'setDataStructureIdentifier',
 )]
-#[AsEventListener(
-    identifier: 'dailyverses/modify-data-structure-identifier',
-    method: 'modifyDataStructureIdentifier',
-)]
-
 #[AsEventListener(
     identifier: 'dailyverses/package-initialization',
     method: 'setFlexForms',
@@ -62,23 +52,22 @@ final readonly class FlexFormParsingModifyEventListener
                     $siteFinder = GeneralUtility::makeInstance(SiteFinder::class);
                     $site = $siteFinder->getSiteByPageId($pageId);
                     $siteIdentifier = $site->getIdentifier();
-                    $event->setDataStructure('FILE:EXT:dailyverses/Configuration/FlexForms/'. $siteIdentifier . '.xml');
+
+                    $flexFormFile = Environment::getVarPath() . 
+                        '/dailyverses/flexforms/' . 
+                        $siteIdentifier . '.xml';
+
+                    if (!file_exists($flexFormFile)) {
+                        $generateFlexForm = GeneralUtility::makeInstance(GenerateFlexForm::class);
+                        $configuration = $site->getConfiguration();
+                        $generateFlexForm->generate($siteIdentifier, $configuration['languages']);
+                    }
+                    $event->setDataStructure('FILE:' . $flexFormFile);
 
                 } catch (\TYPO3\CMS\Core\Exception\SiteNotFoundException $e) {
                 }
             }
         }
-    }
-
-    public function modifyDataStructure(AfterFlexFormDataStructureParsedEvent $event): void
-    {
-        // not used
-        // $identifier = $event->getIdentifier();
-        // if (($identifier['type'] ?? '') === 'my_custom_type') {
-        //     $parsedDataStructure = $event->getDataStructure();
-        //     $parsedDataStructure['sheets']['sDEF']['ROOT']['sheetTitle'] = 'Some dynamic custom sheet title';
-        //     $event->setDataStructure($parsedDataStructure);
-        // }
     }
 
 public function setDataStructureIdentifier(BeforeFlexFormDataStructureIdentifierInitializedEvent $event): void
@@ -122,13 +111,6 @@ public function setDataStructureIdentifier(BeforeFlexFormDataStructureIdentifier
         FlexFormContextStorage::set('contentType', $row['CType'] ?? ''); // future use
     }
 
-    public function modifyDataStructureIdentifier(AfterFlexFormDataStructureIdentifierInitializedEvent $event): void
-    {
-        // not used
-        //$identifier = $event->getIdentifier();
-        //$row = $event->getRow();
-    }
-
     public function setFlexForms(PackageInitializationEvent $event): void
     {
         if ($event->getExtensionKey() !== 'dailyverses') {
@@ -151,6 +133,4 @@ public function setDataStructureIdentifier(BeforeFlexFormDataStructureIdentifier
             $generateFlexForm->generate($siteIdentifier, $configuration['languages']);
         }
     }
-
 }
-
