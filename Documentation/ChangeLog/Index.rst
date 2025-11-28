@@ -10,13 +10,19 @@ Change log
    * - Date
      - Version
      - Description
+   * - 2025-11-12
+     - 13.4.8
+     - *  Dynamic flexforms moved outside extension to var/
+       *  Flexforms are automatically created for each site if they do not exist.
+   * - 2025-11-07
+     - 13.4.5
+     - Added compatibility for installation via composer
    * - 2025-10-08
      - 13.4.3
      - *  Removed dependancy on bootstrap_package
        *  The user may define a custom theme using a CSS file located outside the extension.
           If the bootstrap_package extension is installed, Bootstrap theme variables from bootstrap.css will be applied.
           Otherwise, the default styling from dailyverses.css will be used.
-
    * - 2025-10-01
      - 13.4.2
      - Deprecated code has been removed to ensure compatibility with version 14   
@@ -29,3 +35,4 @@ Change log
 .. raw:: html
 
    <div style="height: 1em;"></div>
+
