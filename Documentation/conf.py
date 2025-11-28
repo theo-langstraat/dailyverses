@@ -12,7 +12,7 @@ copyright = f"2025–{datetime.now().year}, Theo Langstraat"
 project = 'dailyverses'
 #copyright = '2025-%Y, Theo Langstraat '
 author = 'Theo Langstraat'
-release = '13.4.3'
+release = '13.4.8'
 theme_project_home = ''
 
 # -- General configuration ---------------------------------------------------
