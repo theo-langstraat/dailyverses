@@ -131,7 +131,6 @@ If you are not using `bootstrap_package`, you have several alternatives:
 * Develop your own templates and add image fields to your FlexForm configuration.
 
 ----
-## 📜 Change log
 
 Change log
 ==========
@@ -143,4 +142,5 @@ Change log
 | 2025-10-08 | 13.4.3  | - Removed dependency on `bootstrap_package`<br> - The user may define a custom theme using a CSS file located outside the extension.<br> - If the `bootstrap_package` extension is installed, Bootstrap theme variables from `bootstrap.css` will be applied.<br> - Otherwise, the default styling from `dailyverses.css` will be used. |
 | 2025-10-01 | 13.4.2  | - Deprecated code has been removed to ensure compatibility with version 14 |
 | 2025-09-30 | 13.4.1  | - Initial version |
+
 ----
