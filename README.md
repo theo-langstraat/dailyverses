@@ -133,9 +133,37 @@ If you are not using `bootstrap_package`, you have several alternatives:
 ----
 ## 📜 Change log
 
+Change log
+==========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 10 10 50
+
+   * - Date
+     - Version
+     - Description
+   * - 2025-10-08
+     - 13.4.3
+     - *  Removed dependancy on bootstrap_package
+       *  The user may define a custom theme using a CSS file located outside the extension.
+          If the bootstrap_package extension is installed, Bootstrap theme variables from bootstrap.css will be applied.
+          Otherwise, the default styling from dailyverses.css will be used.
+   * - 2025-10-01
+     - 13.4.2
+     - Deprecated code has been removed to ensure compatibility with version 14   
+   * - 2025-09-30
+     - 13.4.1
+     - Initial version
+
+----
+
+
 | Date       | Version | Description |
 |------------|---------|-------------|
+| 2025-11-12 | 13.4.8  | - Dynamic flexforms moved outside extension to var/</br> - Flexforms are automatically created for each site if they do not exist. |
+| 2025-11-07 | 13.4.5  | - Added compatibility for installation via composer |
 | 2025-10-08 | 13.4.3  | - Removed dependency on `bootstrap_package`<br> - The user may define a custom theme using a CSS file located outside the extension.<br> - If the `bootstrap_package` extension is installed, Bootstrap theme variables from `bootstrap.css` will be applied.<br> - Otherwise, the default styling from `dailyverses.css` will be used. |
-| 2025-10-01 | 13.4.2  | Deprecated code has been removed to ensure compatibility with version 14 |
-| 2025-09-30 | 13.4.1  | Initial version |
+| 2025-10-01 | 13.4.2  | - Deprecated code has been removed to ensure compatibility with version 14 |
+| 2025-09-30 | 13.4.1  | - Initial version |
 ----
