@@ -10,6 +10,9 @@ Change log
    * - Date
      - Version
      - Description
+   * - 2025-12-31
+     - 13.4.10
+     - Cosmetic adjustments in documentation and various files.
    * - 2025-11-12
      - 13.4.8
      - *  Dynamic flexforms moved outside extension to var/
@@ -35,4 +38,5 @@ Change log
 .. raw:: html
 
    <div style="height: 1em;"></div>
+
 
