@@ -36,15 +36,21 @@ final readonly class FlexFormParsingModifyEventListener
         $identifier = $event->getIdentifier();
         $pageId = FlexFormContextStorage::get('pageId');
 
+                $haystack = (string)($identifier['dataStructureKey'] ?? '');
+        $needle = 'dailyverses_dailyverses';
+
+        if ($haystack !== '' && str_contains($haystack, $needle)) {
+            // ...
+        
+        // Filter UIDno out '*,dailyverses_dailyverses' to check exact CType
+        //$haystack = $identifier['dataStructureKey'] ?? '';
+        //$needle = 'dailyverses_dailyverses';
+
+        //if (str_contains($haystack, $needle)) {
+
         // The first part is the list_type for which the flexform should be used and the second part the CType. 
         // If one of the parts is empty or a '*' then it matches any value. 
         // In this case we only care about the CType which should be 'dailyverses_dailyverses'.
-
-        // Filter UIDno out '*,dailyverses_dailyverses' to check exact CType
-        $haystack = $identifier['dataStructureKey'] ?? '';
-        $needle = 'dailyverses_dailyverses';
-
-        if (str_contains($haystack, $needle)) {
 
             if ($pageId > 0) {
                 try {
