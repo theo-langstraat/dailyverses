@@ -1,0 +1,97 @@
+<T3DataStructure>
+	<sheets type="array">
+		<lang_en type="array">
+			<ROOT type="array">
+				<sheetTitle>English</sheetTitle>
+				<type>array</type>
+				<el type="array">
+					<settings.en type="array">
+						<label>Select an option:</label>
+						<config type="array">
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">English Standard Version</numIndex>
+									<numIndex index="1">esv</numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">King James Version</numIndex>
+									<numIndex index="1">kjv</numIndex>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<numIndex index="0">New American Standard Bible 2020</numIndex>
+									<numIndex index="1">nasb</numIndex>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<numIndex index="0">New Catholic Bible</numIndex>
+									<numIndex index="1">ncb</numIndex>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<numIndex index="0">New International Version</numIndex>
+									<numIndex index="1">niv</numIndex>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<numIndex index="0">New King James Version</numIndex>
+									<numIndex index="1">nkjv</numIndex>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<numIndex index="0">New Living Translation</numIndex>
+									<numIndex index="1">nlt</numIndex>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<numIndex index="0">New Revised Standard Version</numIndex>
+									<numIndex index="1">nrsv</numIndex>
+								</numIndex>
+								<numIndex index="8" type="array">
+									<numIndex index="0">World English Bible</numIndex>
+									<numIndex index="1">web</numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</settings.en>
+				</el>
+			</ROOT>
+		</lang_en>
+		<sDEF type="array">
+			<ROOT type="array">
+				<sheetTitle>LLL:EXT:dailyverses/Resources/Private/Language/locallang_be.xlf:sDEF.sheetTitle</sheetTitle>
+				<type>array</type>
+				<el type="array">
+					<settings.dailyversesLink type="array">
+						<label>LLL:EXT:dailyverses/Resources/Private/Language/locallang_be.xlf:settings.dailyversesLink.label</label>
+						<config type="array">
+							<type>check</type>
+						</config>
+					</settings.dailyversesLink>
+					<settings.spaceBeneathText type="array">
+						<label>LLL:EXT:dailyverses/Resources/Private/Language/locallang_be.xlf:settings.spaceBeneathText.label</label>
+						<config type="array">
+							<type>input</type>
+							<size>1</size>
+							<eval>int</eval>
+							<default></default>
+						</config>
+					</settings.spaceBeneathText>
+					<settings.modus type="array">
+						<label>Modus</label>
+						<config type="array">
+							<type>radio</type>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>LLL:EXT:dailyverses/Resources/Private/Language/locallang_be.xlf:settings.modusDaily.label</label>
+									<value>daily</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>LLL:EXT:dailyverses/Resources/Private/Language/locallang_be.xlf:settings.modusRandom.label</label>
+									<value>random</value>
+								</numIndex>
+							</items>
+							<default>daily</default>
+						</config>
+					</settings.modus>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

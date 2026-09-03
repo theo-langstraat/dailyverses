@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="messages">
+    <header/>
+    <body>
+      <trans-unit id="sDEF.sheetTitle" xml:space="preserve">
+        <source>Options</source>
+        <target>Optionen</target>
+      </trans-unit>
+      <trans-unit id="settings.dailyversesLink.label" xml:space="preserve">
+        <source>Show Dailyverses link</source>
+        <target>Zeige den Link zu den Dailyverses</target>
+      </trans-unit>
+      <trans-unit id="settings.spaceBeneathText.label" xml:space="preserve">
+        <source>Minimal height in em (css min-heigth) of the content element to allow space for a optional background image</source>
+        <target>Minimale Höhe in em (CSS min-height) des Inhaltelements, um Platz für ein optionales Hintergrundbild zu schaffen.</target>
+      </trans-unit>
+      <trans-unit id="settings.modusDaily.label" xml:space="preserve">
+        <source>Verse of the Day</source>
+        <target>Bibelvers des Tages</target>
+      </trans-unit>
+      <trans-unit id="settings.modusRandom.label" xml:space="preserve">
+        <source>Random Verse</source>
+        <target>Zufalls Bibelvers</target>
+      </trans-unit>
+      <trans-unit id="settings.bootstrapLabel.label" xml:space="preserve">
+        <source>Bootstrap package is installed and active. Using Bootstrap theme. Define your own theme using a custom CSS file if desired.</source>
+        <target>Bootstrap-Paket ist installiert und aktiv. Das Bootstrap-Theme wird verwendet. Definieren Sie bei Bedarf Ihr eigenes Theme mit einer benutzerdefinierten CSS-Datei.</target>
+      </trans-unit>
+      <trans-unit id="settings.dailyversesLabel.label" xml:space="preserve">
+        <source>Define your own theme using a custom CSS file if desired.</source>
+        <target>Definieren Sie Ihr eigenes Theme mithilfe einer benutzerdefinierten CSS-Datei, falls gewünscht.</target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

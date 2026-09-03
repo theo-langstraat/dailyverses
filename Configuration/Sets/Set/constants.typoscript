@@ -1,0 +1,10 @@
+plugin.tx_dailyverses_dailyverses {
+    view {
+        templateRootPath = EXT:dailyverses/Resources/Private/Templates/
+        partialRootPath = EXT:dailyverses/Resources/Private/Partials/
+        layoutRootPath = EXT:dailyverses/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid = 0
+    }
+}
