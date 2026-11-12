@@ -10,6 +10,9 @@ Change log
    * - Date
      - Version
      - Description
+   * - 2026-04-29
+     - 14.3.0
+     - Removed bug: $identifier['dataStructureKey'] is in some cases not a string but an integer.
    * - 2025-12-31
      - 13.4.10
      - Cosmetic adjustments in documentation and various files.
